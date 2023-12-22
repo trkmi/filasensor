@@ -26,7 +26,7 @@
 #define I2C_ADDR 43 //iterate for additional sensors in same I2C bus
 //#define I2C_ADDR 44 //iterate for additional sensors in same I2C bus
 
-#define smooth 100.0 //intensity of digital lowpass filtering
+#define smooth 10.0 //intensity of digital lowpass filtering
 
 #define numtemps 6    //Tablecount 
 
@@ -70,12 +70,12 @@ int16_t dia_table[numtemps][2] = {
   //Init Values for the first start
   //After init Values are read from EEPROM
  
-  { 0     , 3000 },  // safety
-  { 619   , 2090 }, //2mm drill bit
-  { 702   , 1700 }, //1.7mm
-  { 817   , 1400 }, //1.4mm
-  { 1000  , 1000 }, // 1mm
-  { 1023  , 0000 } //safety
+  { 360  , 1000 }, // safety
+  { 412  , 1250 }, // 1.25mm drill bit
+  { 444  , 1500 }, // 1.50mm
+  { 465  , 1750 }, // 1.75mm
+  { 481  , 2000 }, // 2.00mm
+  { 493  , 2250 }  // safety
 };
 
 
